@@ -1,0 +1,13 @@
+#!/usr/bin/gnuplot
+reset
+set terminal pngcairo enhanced font "Verdana,8" size 400,200 linewidth 2 dashlength .3
+set style line 1 linecolor rgb "red" dashtype 4 pointtype 2 pointsize 1
+set output 'spark-gc-latency.png'
+
+unset key
+
+#set xrange [0:5]
+#set yrange [0:4]
+
+plot "< paste run-UnboxedMovieQueries.gc.time run-UnboxedMovieQueries.gc.latency" with linespoints linestyle 1, \
+     "< paste run-ValueMovieQueries.gc.time   run-ValueMovieQueries.gc.latency" with linespoints linestyle 2

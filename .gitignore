@@ -1,0 +1,9 @@
+*.png
+*.log
+*.latency
+*.memory
+*.time
+target/
+*.classpath
+*.project
+.settings/
