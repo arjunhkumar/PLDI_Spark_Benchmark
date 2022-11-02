@@ -1,6 +1,5 @@
 package org.graalvm.svm.objectinlining.utils;
-
-// import java.io.Serializable;
+import java.io.Serializable;
 
 import com.google.gson.GsonBuilder;
 
@@ -12,10 +11,10 @@ public primitive class ValueActor {
 	
 	public byte[] name;
 
-	// @Override
-	// public String toString() {
-	// 	return new GsonBuilder().create().toJson(toActor());
-	// }
+	@Override
+	public String toString() {
+		return new GsonBuilder().create().toJson(toActor());
+	}
 	
 	public ValueActor(Integer birth, Integer death, String name) {
 		this.birth = birth;
